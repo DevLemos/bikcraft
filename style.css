@@ -103,6 +103,11 @@ a {
   background-color: #900;
 }
 
+.introduction-cover{
+  object-fit: cover;
+  height: 100%;
+}
+
 .caption {
   align-self: center;
   text-align: right;
@@ -144,4 +149,56 @@ footer {
   padding: 2.5rem;
   box-sizing: border-box;
   text-align: center;
+}
+
+@media (max-width: 1000px){
+
+  .container-benefits{
+    grid-template-columns: 1fr;
+  }
+
+  .caption {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px){
+
+  body{
+    gap: 1.875rem;
+    margin-top: 1.25rem;
+  }
+
+  header{
+    gap: 1.875rem;
+  }
+
+  .container{
+    grid-template-columns: 1fr;
+  }
+
+  .introduction{
+    text-align: left;
+    justify-items: start;
+  }
+
+  .introduction::before{
+    display: none;
+  }
+
+  .caption{
+    font-size: 3rem;
+  }
+
+}
+
+@media (max-width: 400px){
+
+  .caption{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1rem;
+  }
 }
